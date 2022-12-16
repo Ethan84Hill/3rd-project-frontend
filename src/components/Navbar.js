@@ -15,10 +15,16 @@ function Navbar() {
         
 
         <div className="right-side-nav">
+
+        <Link to="/cart" className="login-link">Cart</Link>
+
+        <Link to="/products" className="login-link">Products</Link>
+
+        <Link to="/products/add" className="login-link">Add Products</Link>
+
         <Link to="/login" className="login-link">Login</Link>
 
         <Link to="/signup" className="signup-link">Signup</Link>
-
 
         <Link onClick={logOutUser} className="logout-link">Logout</Link>
         <span className="hello-user"> Hello there, {user && user.name}!</span>

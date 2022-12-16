@@ -60,3 +60,42 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.product-info-organizer {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-organizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.img-size {
+  width: 200px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.rug-name {
+  text-align: center;
+}
+
+.rug-dimensions {
+  text-align: center;
+}
+
+.rug-price {
+  text-align: center;
+}
+
+.delete-btn {
+  text-align: center;
+  background-color: #800000;
+  color: white;
+}
