@@ -74,6 +74,9 @@
 
 .img-size {
   width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+  margin: auto;
 }
 
 .products-header {
@@ -98,4 +101,155 @@
   text-align: center;
   background-color: #800000;
   color: white;
+  width: 150px;
+  margin: auto;
+}
+
+.add-btn {
+  text-align: center;
+  background-color: #800000;
+  color: white;
+  padding: 15px;
+  width: 150px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.product-background {
+  padding: 20px;
+  background-color: white;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 1px 2px 5px 4px lightgrey;
+}
+
+
+.home-page-header {
+  text-align: center;
+}
+
+.cart-header {
+  text-align: center;
+}
+
+.cart-center {
+  text-align: center;
+}
+
+.add-header {
+  text-align: center;
+}
+
+.form-background {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 1px 2px 5px 4px lightgrey;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.form-organizer {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-bar {
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.name-bar {
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.dim-bar {
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.price-bar {
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.login-background {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 1px 2px 5px 4px lightgrey;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.login-organizer {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-bar {
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.password-bar {
+  width: 500px;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  text-align: center;
+  background-color: #800000;
+  color: white;
+  padding: 15px;
+  width: 150px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.signin-background {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 1px 2px 5px 4px lightgrey;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-btn {
+  text-align: center;
+  background-color: #800000;
+  color: white;
+  padding: 15px;
+  width: 150px;
+  margin: auto;
+  margin-top: 10px;
 }

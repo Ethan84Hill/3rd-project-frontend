@@ -3,7 +3,7 @@ import ProductsPage from "./ProductsPage";
 function HomePage() {
     return (
         <main>
-            <h1>Home Page</h1>
+            <h1 className="home-page-header">Browse Our Products!</h1>
             <ProductsPage />
         </main>
     )

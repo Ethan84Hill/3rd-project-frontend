@@ -18,7 +18,7 @@ function Navbar() {
 
         <Link to="/cart" className="login-link">Cart</Link>
 
-        <Link to="/products" className="login-link">Products</Link>
+        {/* <Link to="/products" className="login-link">Products</Link> */}
 
         <Link to="/products/add" className="login-link">Add Products</Link>
 

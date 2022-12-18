@@ -35,23 +35,26 @@ function AddProduct() {
     }
 
     return (
-        <div>
+        <div className='form-background'>
+        
+            <h1 className="add-header">Add products</h1>
             
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleFormSubmit} className="form-organizer">
 
                 <label>Image: </label>
-                <input value={img} onChange={updateImg} />
+                <input value={img} onChange={updateImg} className="img-bar" />
 
                 <label>Name: </label>
-                <input value={name} onChange={updateName} />
+                <input value={name} onChange={updateName} className="name-bar" />
 
                 <label>Dimensions: </label>
-                <input value={dimensions} onChange={updateDimensions} />
+                <input value={dimensions} onChange={updateDimensions} className="dim-bar" />
 
                 <label>Price: </label>
-                <input value={price} onChange={updatePrice} />
+                <input value={price} onChange={updatePrice} className="price-bar" />
 
-                <button>Add Product</button>
+                <button className='add-btn'>Add Product</button>
+
             </form>
         </div>
     )
