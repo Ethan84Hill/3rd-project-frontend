@@ -12,28 +12,24 @@ function CartPage() {
         setCartArray(cartArray.filter(product => product !== productToRemove))
     }
 
-    // useEffect(() => {
-    //     localStorage.setItem('Cart', JSON.stringify(cartArray));
-    //   }, [cartArray]);
-
     
+
+
 
     let totalPrice = 0
 
-    let thisCart = JSON.parse(localStorage.getItem('Cart'))
+    
     
     return (
         <main>
             <h1 className="cart-header">Here's what's in your cart!</h1>
             <div className='product-organizer'>
-            {thisCart && thisCart.map((singleProduct) => {
-                {/* totalPrice += singleProduct.product.price * singleProduct.quantity; */}
+            {cartArray.length && cartArray.map((singleProduct) => {
+                totalPrice += singleProduct.product.price * singleProduct.quantity;
                 return (
                     <div className='product-info-organizer product-background' 
                     key={singleProduct._id}
                     >
-                    {/* <p>{singleProduct.name}</p>
-                    <p>{singleProduct.price}</p> */}
                         <img className='img-size' src={singleProduct.product.img} alt="pic" />
                         <h3 className='rug-name'>Name: {singleProduct.product.name}</h3>
                         <h3 className='rug-dimensions'>Dimensions: {singleProduct.product.dimensions}</h3>

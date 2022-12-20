@@ -27,7 +27,7 @@ function ProductsPage() {
         })
         .catch(err => console.log(err))
     }, [])
-    // console.log(productsArray)
+    
 
     function IncreaseQuantity(index) {
         const productsArrCopy = [...productsArray]
@@ -44,47 +44,21 @@ function ProductsPage() {
         setProductsArray(productsArrCopy)
     }
 
-    let cartArrChanged = JSON.parse(localStorage.getItem('cart'))
 
     function AddToCart(index) {
 
+        let newItem =  {
+            product: productsArray[index].product,
+            quantity: productsArray[index].quantity
+        }
 
-        const addToCartOne = () => { return new Promise((resolve) => {
-            console.log('we are promising', cartArrChanged)
-            let newestCArt = [...cartArray].push({
-                product: productsArray[index].product,
-                quantity: productsArray[index].quantity
-            })
-            resolve(setCartArray(newestCArt))
-        })
-}
-        // const productIndex = cartArray.findIndex(element => {
-        //     return (
-        //         productsArray[index].product._id === element.product._id
-        //     )
-        // })
-      
-        // if (productIndex === -1) {
+        setCartArray([...cartArray, newItem])
 
-            addToCartOne()
-            .then(() => {
-                console.log('using then', cartArray)
-                localStorage.setItem('cart', cartArray)
-            })
 
-            // setCartArray([...cartArray, {
-            //     product: productsArray[index].product,
-            //     quantity: productsArray[index].quantity
-            // }])
-            
-        // } else {
-        //     const updatedCartArray = [...cartArray]
-        //     updatedCartArray[productIndex].quantity += productsArray[index].quantity
-        //     setCartArray(updatedCartArray)
-        //     localStorage.setItem('Cart', cartArray)
-        // }
+console.log("NEW CART", cartArray)
+console.log("This is productsArray", productsArray[index])
     }
-    // console.log(cartArray)
+   
 
     return (
         <div>
