@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/auth.context";
@@ -21,6 +21,7 @@ function CheckoutPage() {
 
     const { storedToken, authenticateUser } = useContext(AuthContext);
     // console.log(storedToken)
+
 
     const handleEmail = (e) => setEmail(e.target.value);
     const handleName = (e) => setName(e.target.value);
