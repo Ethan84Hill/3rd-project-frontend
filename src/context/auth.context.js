@@ -15,7 +15,7 @@ function AuthProviderWrapper(props){
     const storeToken = (token) => {       
         localStorage.setItem('authToken', token);
       }
-      
+
       const storedToken = localStorage.getItem('authToken');
 
       const authenticateUser = () => {           
@@ -24,7 +24,7 @@ function AuthProviderWrapper(props){
         
         if (storedToken) {
           axios.get(
-            `${API_URL}/auth/verify`, 
+            `${process.env.REACT_APP_BACKEND_URL}/auth/verify`, 
             { headers: { Authorization: `Bearer ${storedToken}`} }
           )
           .then((response) => {

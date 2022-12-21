@@ -19,7 +19,7 @@ function AddProduct() {
     const handleFormSubmit = e => {
         e.preventDefault();
         const storedToken = localStorage.getItem('authToken');
-        axios.post('http://localhost:3001/products/add', {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/products/add`, {
             img: img,
             name: name,
             dimensions: dimensions,
@@ -36,7 +36,7 @@ function AddProduct() {
 
     return (
         <div className='form-background'>
-        
+
             <h1 className="add-header">Add products</h1>
             
             <form onSubmit={handleFormSubmit} className="form-organizer">

@@ -35,7 +35,7 @@ function CheckoutPage() {
         e.preventDefault();
         const requestBody = { email, name, phoneNumber, address, city, state, zipcode };
      
-        axios.post('http://localhost:3001/checkout', {requestBody, cartArray}, {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/checkout`, {requestBody, cartArray}, {
             headers: {
             Authorization: `Bearer ${storedToken}`
           }})
@@ -49,7 +49,7 @@ function CheckoutPage() {
             console.log(err)
           })
       };
-      
+
 
     return (
         <main className="SignupPage login-background">

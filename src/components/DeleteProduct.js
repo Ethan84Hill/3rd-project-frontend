@@ -15,7 +15,7 @@ function DeleteProduct({productId, setProductsArray, productsArray}) {
     const handleItemDelete = e => {
         e.preventDefault();
         const storedToken = localStorage.getItem('authToken');
-        axios.delete(`http://localhost:3001/products/${productId}`, {
+        axios.delete(`${process.env.REACT_APP_BACKEND_URL}/products/${productId}`, {
             name: name,
             dimensions: dimensions,
             price: price
