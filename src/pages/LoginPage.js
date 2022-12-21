@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
  
-const API_URL = "http://localhost:3001";
+
  
  
 function LoginPage(props) {

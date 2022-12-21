@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 function DeleteProduct({productId, setProductsArray, productsArray}) {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
     // const { productId } = useParams();
 
     const [name, setName] = useState('')

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState, useEffect, useContext } from 'react'
-import { Link } from 'react-router-dom'
+
 
 import DeleteProduct from '../components/DeleteProduct';
 import { StoreContext } from '../context/store.context';
@@ -8,15 +8,12 @@ import { AuthContext } from '../context/auth.context';
 
 function ProductsPage() {
 
-    const { isLoggedIn, user } = useContext(AuthContext)
+    const { user } = useContext(AuthContext)
 
     const [productsArray, setProductsArray] = useState([])
-    const [cartQuantity, setCartQuantity] = useState(1)
+    // const [cartQuantity, setCartQuantity] = useState(1)
 
-    // const [isAdmin, setIsAdmin] = useState({
-    //     email: "asdf@asdf.com",
-    //     password: "asdf"
-    // })
+   
 
     const {cartArray, setCartArray} = useContext(StoreContext)
 

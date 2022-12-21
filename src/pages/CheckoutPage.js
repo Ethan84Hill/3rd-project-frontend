@@ -1,10 +1,10 @@
-import { useState, useContext, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../context/auth.context";
 import { StoreContext } from "../context/store.context";
  
-const API_URL = "http://localhost:3001";
+
 
 
 function CheckoutPage() {
