@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
-import AddProduct from '../components/AddProduct';
+
 import DeleteProduct from '../components/DeleteProduct';
 import { StoreContext } from '../context/store.context';
 import { AuthContext } from '../context/auth.context';
