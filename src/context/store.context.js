@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
-import useLocalStorage from "react-use-localstorage";
+
 
 
 const API_URL='http://localhost:3001'
@@ -8,7 +8,7 @@ const API_URL='http://localhost:3001'
 const StoreContext = createContext();
 
 function StoreWrapper(props) {
-    
+
     const [cartArray, setCartArray] = useState(JSON.parse(localStorage.getItem("cart")) || [])
 
     useEffect(() => {

@@ -9,6 +9,7 @@ import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 
 import './App.css';
+import './Cart.css'
 
 function App() {
   return (

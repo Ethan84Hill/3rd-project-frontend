@@ -253,3 +253,28 @@
   margin: auto;
   margin-top: 10px;
 }
+
+.btn-quantity-organizer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-organizer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.btn-increase {
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.btn-decrease {
+  
+}
+
+.quantity-number {
+  
+}

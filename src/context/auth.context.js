@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from "react";
+import { useLocation, useNavigate, Outlet } from "react-router-dom";
 import axios from "axios";
 
 
@@ -14,7 +15,9 @@ function AuthProviderWrapper(props){
     const storeToken = (token) => {       
         localStorage.setItem('authToken', token);
       }
+      
       const storedToken = localStorage.getItem('authToken');
+
       const authenticateUser = () => {           
         const storedToken = localStorage.getItem('authToken');
         

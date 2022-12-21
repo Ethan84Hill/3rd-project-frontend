@@ -20,14 +20,14 @@ function Navbar() {
 
         {/* <Link to="/products" className="login-link">Products</Link> */}
 
-        <Link to="/products/add" className="login-link">Add Products</Link>
+        { user && user.email === "asdf@asdf.com" ? <Link to="/products/add" className="login-link">Add Products</Link> : null }
 
-        <Link to="/login" className="login-link">Login</Link>
+        { !isLoggedIn ? <Link to="/login" className="login-link">Login</Link> : null }
 
-        <Link to="/signup" className="signup-link">Signup</Link>
+        { !isLoggedIn ? <Link to="/signup" className="signup-link">Signup</Link> : null }
 
-        <Link onClick={logOutUser} className="logout-link">Logout</Link>
-        <span className="hello-user"> Hello there, {user && user.name}!</span>
+        { isLoggedIn ? <Link onClick={logOutUser} className="logout-link">Logout</Link> : null }
+        { isLoggedIn ? <span className="hello-user"> Hello there, {user && user.name}!</span> : null }
         </div>
  
     </nav>

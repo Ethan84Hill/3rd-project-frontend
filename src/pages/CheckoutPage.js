@@ -49,8 +49,7 @@ function CheckoutPage() {
             console.log(err)
           })
       };
-  
-
+      
 
     return (
         <main className="SignupPage login-background">

@@ -4,11 +4,20 @@ import { Link } from 'react-router-dom'
 import AddProduct from '../components/AddProduct';
 import DeleteProduct from '../components/DeleteProduct';
 import { StoreContext } from '../context/store.context';
+import { AuthContext } from '../context/auth.context';
 
 function ProductsPage() {
 
+    const { isLoggedIn, user } = useContext(AuthContext)
+
     const [productsArray, setProductsArray] = useState([])
     const [cartQuantity, setCartQuantity] = useState(1)
+
+    // const [isAdmin, setIsAdmin] = useState({
+    //     email: "asdf@asdf.com",
+    //     password: "asdf"
+    // })
+
     const {cartArray, setCartArray} = useContext(StoreContext)
 
     const storedToken = localStorage.getItem("authToken");
@@ -54,9 +63,8 @@ function ProductsPage() {
 
         setCartArray([...cartArray, newItem])
 
-
-console.log("NEW CART", cartArray)
-console.log("This is productsArray", productsArray[index])
+        console.log("NEW CART", cartArray)
+        console.log("This is productsArray", productsArray[index])
     }
    
 
@@ -73,11 +81,15 @@ console.log("This is productsArray", productsArray[index])
                         <h3 className='rug-name'>Name: {singleProduct.product.name}</h3>
                         <h3 className='rug-dimensions'>Dimensions: {singleProduct.product.dimensions}</h3>
                         <h3 className='rug-price'>Price: ${singleProduct.product.price}</h3>
-                        <button className='delete-btn'><DeleteProduct productId={singleProduct.product._id} setProductsArray={setProductsArray} productsArray={productsArray} /></button>
+                        { user && user.email === "asdf@asdf.com" ? <button className='delete-btn'><DeleteProduct productId={singleProduct.product._id} setProductsArray={setProductsArray} productsArray={productsArray} /></button> : null }
                         <button onClick={() => AddToCart(index)} className='add-btn'>Add to cart</button>
-                        <p>Quantity: {singleProduct.quantity}</p>
-                        <button onClick={() => IncreaseQuantity(index)}>+</button>
-                        <button onClick={() => DecreaseQuantity(index)}>-</button>
+                        <div className='btn-quantity-organizer'>
+                        <h3 className='quantity-number'>Quantity: {singleProduct.quantity}</h3>
+                        <div className='button-organizer'>
+                        <button className='btn-increase' onClick={() => IncreaseQuantity(index)}>+</button>
+                        <button className='btn-decrease' onClick={() => DecreaseQuantity(index)}>-</button>
+                        </div>
+                        </div>
                     </div> 
                 )
             })}
