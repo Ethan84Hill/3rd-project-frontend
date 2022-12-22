@@ -26,29 +26,38 @@
   text-decoration: none;
   color: white;
   padding: 10px;
+  font-size: 20px;
 }
 
 .login-link {
   text-decoration: none;
   color: white;
   padding: 10px;
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .signup-link {
   text-decoration: none;
   color: white;
   padding: 10px;
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .logout-link {
   text-decoration: none;
   color: white;
   padding: 10px;
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .hello-user {
   color: white;
   padding: 10px;
+  font-size: 20px;
+  padding-left: 20px;
 }
 
 .left-side-nav {
@@ -69,14 +78,14 @@
 .product-organizer {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  float: left;
 }
 
 .img-size {
-  width: 200px;
-  height: 200px;
-  object-fit: scale-down;
+  width: 350px;
   margin: auto;
+  padding-bottom: 10px;
 }
 
 .products-header {
@@ -86,15 +95,21 @@
 }
 
 .rug-name {
-  text-align: center;
+  margin: auto;
+  margin-left: 45px;
+  margin-bottom: 15px;
 }
 
 .rug-dimensions {
-  text-align: center;
+  margin: auto;
+  margin-left: 45px;
+  margin-bottom: 15px;
 }
 
 .rug-price {
-  text-align: center;
+  margin: auto;
+  margin-left: 45px;
+  margin-bottom: 15px;
 }
 
 .delete-btn {
@@ -103,6 +118,20 @@
   color: white;
   width: 150px;
   margin: auto;
+}
+
+.edit-btn {
+  text-align: center;
+  background-color: #800000;
+  color: white;
+  width: 146px;
+  margin: auto;
+  margin-top: 10px;
+  text-decoration: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 2px solid black;
+  font-size: 14px;
 }
 
 .add-btn {
@@ -120,8 +149,11 @@
   background-color: white;
   border: 2px solid lightgrey;
   border-radius: 10px;
-  width: 300px;
+  width: 350px;
   box-shadow: 1px 2px 5px 4px lightgrey;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 

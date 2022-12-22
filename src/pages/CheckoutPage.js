@@ -40,9 +40,10 @@ function CheckoutPage() {
             Authorization: `Bearer ${storedToken}`
           }})
           .then((response) => {
-            console.log(response)
+            console.log(response.data)
             console.log('hi')
             // storedToken(response.data.authToken); 
+            setCartArray('')
             navigate('/');
           })
           .catch((err) => {

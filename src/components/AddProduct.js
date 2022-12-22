@@ -29,7 +29,7 @@ function AddProduct() {
         )
         .then(axiosResponse => {
             console.log(axiosResponse.data)
-            navigate('/products')
+            navigate('/')
         })
         .catch(err => console.log(err))
     }

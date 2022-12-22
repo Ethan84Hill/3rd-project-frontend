@@ -1,10 +1,13 @@
 import axios from 'axios'
 import { useState, useEffect, useContext } from 'react'
+import { Link } from "react-router-dom";
 
 
 import DeleteProduct from '../components/DeleteProduct';
+import EditProduct from '../components/EditProduct';
 import { StoreContext } from '../context/store.context';
 import { AuthContext } from '../context/auth.context';
+import EditProductPage from './EditProductPage';
 
 function ProductsPage() {
 
@@ -75,10 +78,11 @@ function ProductsPage() {
                 return (
                     <div className='product-info-organizer product-background' key={singleProduct._id}>
                         <img className='img-size' src={singleProduct.product.img} alt="pic" />
-                        <h3 className='rug-name'>Name: {singleProduct.product.name}</h3>
+                        <h3 className='rug-name'>{singleProduct.product.name}</h3>
                         <h3 className='rug-dimensions'>Dimensions: {singleProduct.product.dimensions}</h3>
                         <h3 className='rug-price'>Price: ${singleProduct.product.price}</h3>
                         { user && user.email === "asdf@asdf.com" ? <button className='delete-btn'><DeleteProduct productId={singleProduct.product._id} setProductsArray={setProductsArray} productsArray={productsArray} /></button> : null }
+                        { user && user.email === "asdf@asdf.com" ? <Link to={`/products/${singleProduct.product._id}`} className="edit-btn">Edit Price</Link> : null }
                         <button onClick={() => AddToCart(index)} className='add-btn'>Add to cart</button>
                         <div className='btn-quantity-organizer'>
                         <h3 className='quantity-number'>Quantity: {singleProduct.quantity}</h3>
